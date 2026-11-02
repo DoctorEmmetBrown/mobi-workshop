@@ -1,43 +1,41 @@
-# Site MoBI 2027 — mise en ligne
+# MoBI 2027 website
 
-Site statique d'une page, prêt pour GitHub Pages (gratuit, HTTPS inclus).
+One-page static site for the MoBI 2027 Modulation-Based Imaging Workshop (Centre Paul-Langevin, Aussois, 31 May – 4 June 2027), served with GitHub Pages.
 
-## Contenu du dossier
+## Files
 
-| Fichier | Rôle |
+| File | Purpose |
 |---|---|
-| `index.html` | La landing page |
-| `img/` | Les six photos du CAES (crédits affichés sur la page) |
-| `favicon.svg`, `apple-touch-icon.png` | Icônes d'onglet et d'écran d'accueil |
-| `og-image.png` | Image d'aperçu quand le lien est partagé (mail, Slack, LinkedIn) |
-| `CNAME` | Le nom de domaine du site (`mobi-workshop.org`) |
-| `.nojekyll` | Demande à GitHub de servir les fichiers tels quels |
-| `robots.txt` | Autorise l'indexation par les moteurs de recherche |
+| `index.html` | The landing page |
+| `img/` | The six CAES photos (credits shown on the page) |
+| `favicon.svg`, `apple-touch-icon.png` | Browser tab and home-screen icons |
+| `og-image.png` | Preview image shown when the link is shared (email, Slack, LinkedIn) |
+| `CNAME` | Custom domain of the site (`mobi-workshop.org`) |
+| `.nojekyll` | Tells GitHub Pages to serve the files as they are |
+| `robots.txt` | Allows search engines to index the site |
 
-## Si tu choisis un autre nom de domaine
+## Using another domain name
 
-Remplace `mobi-workshop.org` à trois endroits :
-1. dans `CNAME` (une seule ligne, sans `https://`) ;
-2. dans `index.html`, balise `<link rel="canonical" …>` ;
-3. dans `index.html`, balises `og:url` et `og:image`.
+Replace `mobi-workshop.org` in three places:
+1. in `CNAME` (one line, without `https://`);
+2. in `index.html`, the `<link rel="canonical" …>` tag;
+3. in `index.html`, the `og:url` and `og:image` tags.
 
-## Étape 1 — Publier sur GitHub Pages
+## Step 1: publish with GitHub Pages
 
-1. Sur github.com, crée un dépôt public, par exemple `mobi-workshop`.
-2. Bouton **Add file › Upload files** : glisse tout le contenu de ce dossier (y compris `img/`, `CNAME` et `.nojekyll`). Valide avec **Commit changes**.
-   Sur Mac, `.nojekyll` est un fichier caché : appuie sur Cmd+Maj+. dans le Finder pour l'afficher avant de le glisser.
-3. **Settings › Pages** : Source = *Deploy from a branch*, branche `main`, dossier `/ (root)`, puis **Save**.
-4. Après une minute, le site est visible à `https://<ton-compte>.github.io/mobi-workshop/`.
+1. Upload the content of this folder to the repository, including `img/`, `CNAME` and `.nojekyll`.
+2. **Settings › Pages**: Source = *Deploy from a branch*, branch `main`, folder `/ (root)`, then **Save**.
+3. After about a minute, the site is live at `https://<account>.github.io/<repository>/` (or at the custom domain once step 3 is done).
 
-## Étape 2 — Acheter le domaine
+## Step 2: register the domain
 
-Chez OVHcloud, Gandi ou Cloudflare. Pas besoin de prendre d'hébergement ni d'adresse mail.
+Any registrar works (OVHcloud, Gandi, Cloudflare…). No hosting or email plan is needed.
 
-## Étape 3 — Relier le domaine (zone DNS chez le registrar)
+## Step 3: point the domain to GitHub (DNS zone at the registrar)
 
-Supprime les enregistrements A / AAAA proposés par défaut sur le domaine nu, puis ajoute :
+Remove the default A / AAAA records on the bare domain, then add:
 
-| Type | Nom | Valeur |
+| Type | Name | Value |
 |---|---|---|
 | A | @ | 185.199.108.153 |
 | A | @ | 185.199.109.153 |
@@ -47,20 +45,20 @@ Supprime les enregistrements A / AAAA proposés par défaut sur le domaine nu, p
 | AAAA | @ | 2606:50c0:8001::153 |
 | AAAA | @ | 2606:50c0:8002::153 |
 | AAAA | @ | 2606:50c0:8003::153 |
-| CNAME | www | `<ton-compte>.github.io.` |
+| CNAME | www | `<account>.github.io.` |
 
-Ensuite, dans **Settings › Pages** du dépôt :
-1. vérifie que *Custom domain* affiche `mobi-workshop.org` (il est lu depuis le fichier `CNAME`) ;
-2. attends que le contrôle DNS passe au vert (de quelques minutes à quelques heures) ;
-3. coche **Enforce HTTPS**.
+Then, in **Settings › Pages**:
+1. check that *Custom domain* shows `mobi-workshop.org` (it is read from the `CNAME` file);
+2. wait for the DNS check to turn green (from a few minutes to a few hours);
+3. tick **Enforce HTTPS**.
 
-Conseil : dans **Settings › Pages**, GitHub propose aussi de *vérifier* le domaine pour ton compte. Fais-le, cela empêche quelqu'un d'autre de l'utiliser sur GitHub.
+Tip: GitHub also lets you *verify* the domain for your account (account **Settings › Pages**). Do it: it prevents anyone else from using the domain on GitHub.
 
-## Mettre à jour le site
+## Updating the site
 
-Modifie `index.html` (ou dépose une nouvelle version au même nom) dans le dépôt. Le site se met à jour en une minute environ.
+Edit `index.html` in the repository, or upload a new version under the same name. The site updates in about a minute.
 
-## Avant de rendre l'adresse publique
+## Before announcing the address
 
-- Accord du CAES pour l'usage de leurs photos (crédits déjà indiqués sous la galerie).
-- Adresse de contact : dans `index.html`, cherche `CONTACT_EMAIL = ""` et mets l'adresse entre les guillemets pour afficher la ligne « Questions? Write to ».
+- Get the CAES's agreement to use their photos (credits are already shown under the gallery).
+- Contact address: in `index.html`, find `CONTACT_EMAIL = ""` and put the address between the quotes to show the "Questions? Write to" line.
