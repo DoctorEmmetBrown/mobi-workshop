@@ -13,6 +13,7 @@ One-page static site for the MoBI 2027 Modulation-Based Imaging Workshop (Centre
 | `CNAME` | Custom domain of the site (`mobi-workshop.org`) |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 | `robots.txt` | Allows search engines to index the site |
+| `files/` | Downloadable documents (abstract template) |
 
 ## Using another domain name
 
@@ -62,3 +63,7 @@ Edit `index.html` in the repository, or upload a new version under the same name
 
 - Get the CAES's agreement to use their photos (credits are already shown under the gallery).
 - Contact address: in `index.html`, find `CONTACT_EMAIL = ""` and put the address between the quotes to show the "Questions? Write to" line.
+
+## Abstract template
+
+`files/MoBI2027_Abstract_template.docx` is linked from the Key dates section. To update it, upload the new version under the same name.

@@ -306,6 +306,9 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .dates .ws time { color: var(--accent-ink); }
 .board-head a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .next .go { margin-top: 0.8rem; align-self: flex-start; font-size: 0.92rem; padding: 0.6rem 1rem; }
+.next .dl { margin-top: 0.7rem; font-size: 0.88rem; font-weight: 500; color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.next .dl::before { content: "\2193  "; color: var(--accent-ink); }
+#next .sec-head a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .next { margin-top: 2rem; }
 
 footer { border-top: 1px solid var(--line); padding-block: 2.5rem 3rem; }
@@ -591,7 +594,7 @@ footer p { font-size: 0.88rem; color: var(--muted); max-width: 30rem; }
     <div class="sec-head">
       <p class="eyebrow">Key dates</p>
       <h2>Before Aussois.</h2>
-      <p>Abstracts and open problems are both sent through the workshop&rsquo;s Sciencesconf site.</p>
+      <p>Abstracts and open problems are both sent through the workshop&rsquo;s Sciencesconf site, using the <a href="files/MoBI2027_Abstract_template.docx" download>abstract template</a>: one page of text, up to two figures, and an optional page to describe an open problem.</p>
     </div>
     <ol class="dates">
       <li><time datetime="2027-03-15">15 March 2027</time><span>Abstract deadline</span></li>
@@ -600,8 +603,8 @@ footer p { font-size: 0.88rem; color: var(--muted); max-width: 30rem; }
       <li class="ws"><time datetime="2027-05-31">31 May – 4 June</time><span>Workshop in Aussois</span></li>
     </ol>
     <ul class="next">
-      <li><h3>Call for abstracts</h3><p>Selected talks of 15 minutes plus questions, in the morning sessions.</p><span class="tba">Deadline 15 March 2027</span><a class="btn go" href="https://mobi2027.sciencesconf.org/user/submit?lang=en" target="_blank" rel="noopener">Submit an abstract</a></li>
-      <li><h3>Call for open problems</h3><p>The question, failure or dataset you would like help with. It goes on the shared board before the workshop and can become a Tuesday pitch.</p><a class="btn go ghost" href="https://mobi2027.sciencesconf.org/user/submit?lang=en" target="_blank" rel="noopener">Send an open problem</a></li>
+      <li><h3>Call for abstracts</h3><p>Selected talks of 15 minutes plus questions, in the morning sessions.</p><span class="tba">Deadline 15 March 2027</span><a class="btn go" href="https://mobi2027.sciencesconf.org/user/submit?lang=en" target="_blank" rel="noopener">Submit an abstract</a><a class="dl" href="files/MoBI2027_Abstract_template.docx" download>Abstract template (.docx)</a></li>
+      <li><h3>Call for open problems</h3><p>The question, failure or dataset you would like help with. It goes on the shared board before the workshop and can become a Tuesday pitch.</p><a class="btn go ghost" href="https://mobi2027.sciencesconf.org/user/submit?lang=en" target="_blank" rel="noopener">Send an open problem</a><a class="dl" href="files/MoBI2027_Abstract_template.docx" download>Abstract template (.docx)</a></li>
       <li><h3>Registration</h3><p>Fees and travel support will be published with the opening of registration.</p><span class="tba">Closes 26 April 2027</span></li>
     </ul>
     <div class="contact" id="contact" hidden>
