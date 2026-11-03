@@ -237,6 +237,12 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .team { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 0.6rem 2rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
 .team li { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; padding-block: 0.6rem; border-top: 1px solid var(--line); }
 .team li small { display: block; font-family: var(--font-body); font-weight: 400; font-size: 0.82rem; color: var(--muted); }
+.funders { margin-top: 3rem; padding-top: 1.6rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2.5rem; }
+.funders h3 { font-family: var(--font-mono); font-weight: 500; font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.funders ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
+.funders a { display: flex; align-items: center; justify-content: center; width: 10.5rem; height: 5.5rem; padding: 0.8rem 1rem; background: #fff; border: 1px solid var(--line); border-radius: 0.5rem; }
+.funders a:hover { border-color: var(--ink); }
+.funders img { display: block; height: 100%; width: 100%; object-fit: contain; }
 .team-note { margin-top: 1.6rem; font-size: 0.93rem; color: var(--muted); max-width: 38rem; }
 
 
@@ -398,7 +404,7 @@ footer p { font-size: 0.88rem; color: var(--muted); max-width: 30rem; }
     <div class="sec-head">
       <p class="eyebrow">Programme</p>
       <h2>From the light to the limits.</h2>
-      <p>Monday afternoon opens with two tutorials, one per community. From Tuesday, each morning has its own session, following the path of the signal. Afternoons are working sessions for everyone.</p>
+      <p>Monday afternoon opens with two tutorials, one per community. From Tuesday, each morning has its own session, going from the source, through the modulator, all the way to the detector and beyond. Afternoons are working sessions for everyone.</p>
     </div>
     <ol class="sessions">
       <li class="d1"><span class="date">Mon 31 May</span><h3>Common ground</h3><p class="q">Tutorials: X-ray phase imaging, and imaging with visible light</p></li>
@@ -494,7 +500,7 @@ footer p { font-size: 0.88rem; color: var(--muted); max-width: 30rem; }
         <article class="card c2" data-d="2"><span class="tag">The modulator · Both communities</span><h4>What is the best modulation topology?</h4><p>Gratings, checkerboards, random diffusers and speckle, coded or structured patterns: each is defended on its own terms. A fair comparison needs common criteria.</p></article>
         <article class="card c2" data-d="2"><span class="tag">The modulator · Both communities</span><h4>How do we maximise the information gained per photon?</h4><p>Absorbing modulators throw photons away; phase modulators and scatterers keep them but are harder to model. Dose for X-ray, light budget for the visible: the same trade-off.</p></article>
         <article class="card c2" data-d="2"><span class="tag">The modulator · Both communities</span><h4>How do we characterise a modulator and describe it to the model?</h4><p>Real modulators deviate from their design in profile, period and stability. How accurately must we know them, and how do we measure them in practice?</p></article>
-        <article class="card c2" data-d="2"><span class="tag">The modulator · Both communities</span><h4>Can we agree on a trusted end-to-end simulator?</h4><p>Wave-optics simulation is used in both communities, but each validates it against different experiments. A common validation case would show which simulators can be trusted for design.</p></article>
+        <article class="card c2" data-d="2"><span class="tag">The modulator · Both communities</span><h4>Can we agree on a trusted end-to-end simulator?</h4><p>Simulation is used in both communities, but each validates it against different experiments. A common validation case would show which simulators can be trusted for design.</p></article>
         <article class="card c3" data-d="3"><span class="tag">Retrieval &amp; quantification · Both communities</span><h4>Phase integration: how do we stay quantitative?</h4><p>Integrating phase gradients is sensitive to noise, boundary conditions and low spatial frequencies. Reconstructing a wavefront from slopes is also a classical problem in optics.</p></article>
         <article class="card c3" data-d="3"><span class="tag">Retrieval &amp; quantification · Both communities</span><h4>How do we take noise into account efficiently?</h4><p>Noise enters the forward model, the retrieval and the regularisation. How do we get useful uncertainty estimates without heavy Monte Carlo runs?</p></article>
         <article class="card c3" data-d="3"><span class="tag">Retrieval &amp; quantification · X-ray first</span><h4>What exactly does dark-field measure, and can it be compared between set-ups?</h4><p>The signal depends on the set-up (propagation distance, modulation scale, wavelength) as well as on the sample. Which sample-intrinsic quantity can we extract?</p></article>
@@ -627,6 +633,13 @@ footer p { font-size: 0.88rem; color: var(--muted); max-width: 30rem; }
       <li>Emmanuel Brun<small>Inserm, Institut pour l&rsquo;Avancée des Biosciences, Grenoble, France</small></li>
     </ul>
     <p class="team-note">Organised within the IRP LINX project.</p>
+    <div class="funders">
+      <h3>Supported by</h3>
+      <ul>
+        <li><a href="https://www.inserm.fr/" target="_blank" rel="noopener"><img src="img/partners/inserm.png" alt="Inserm" width="502" height="290"></a></li>
+        <li><a href="https://www.onera.fr/" target="_blank" rel="noopener"><img src="img/partners/onera.png" alt="ONERA, The French Aerospace Lab" width="476" height="129"></a></li>
+      </ul>
+    </div>
   </section>
 </main>
 
